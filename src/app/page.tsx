@@ -26,27 +26,13 @@ export default function HomePage() {
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/45" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,transparent_58%)]" />
           <div className="pointer-events-none absolute inset-x-0 top-[48%] h-36 -translate-y-1/2 bg-black/40 blur-2xl md:h-52" />
-          <div className="relative z-10 flex min-h-[min(70svh,920px)] flex-col items-center justify-center px-5 py-20 text-center text-white sm:px-8 md:min-h-[min(88svh,920px)] md:py-24">
+          <div className="relative z-10 flex min-h-[min(70svh,920px)] flex-col items-center px-5 pt-28 text-center text-white sm:px-8 md:min-h-[min(88svh,920px)] md:pt-36 lg:pt-44">
             <p className="mb-5 text-[13px] font-medium tracking-wide text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] md:text-[14px]">
               Villanyszerelés · Kecskemét
             </p>
             <h1 className="font-display max-w-4xl text-[28px] leading-[1.15] font-medium text-balance drop-shadow-[0_2px_18px_rgba(0,0,0,0.85)] sm:text-[40px] md:text-[48px]">
               {site.tagline}
             </h1>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:mt-10">
-              <Link
-                href="/kapcsolat"
-                className="inline-flex min-w-44 items-center justify-center rounded-full bg-white px-8 py-2.5 text-[14px] font-medium text-foreground transition hover:bg-white/90"
-              >
-                Lépj velünk kapcsolatba
-              </Link>
-              <Link
-                href="/vbf"
-                className="inline-flex min-w-44 items-center justify-center rounded-full bg-white/15 px-8 py-2.5 text-[14px] font-medium text-white backdrop-blur-md transition hover:bg-white/25"
-              >
-                VBF felülvizsgálat
-              </Link>
-            </div>
           </div>
         </div>
       </section>
