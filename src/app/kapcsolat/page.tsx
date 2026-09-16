@@ -17,7 +17,12 @@ export default function ContactPage() {
       <PageHero
         kicker="Elérhetőség"
         title="Lépj velünk kapcsolatba"
-        text={`${site.address} · ${site.phone}`}
+        text={
+          <>
+            <span className="block">{site.address}</span>
+            <span className="mt-2 block whitespace-nowrap">{site.phone}</span>
+          </>
+        }
         image={{ src: heroImages.siteWork, alt: "Helyszíni munkavégzés" }}
       >
         <HeroButton href={site.phoneHref}>Hívás</HeroButton>

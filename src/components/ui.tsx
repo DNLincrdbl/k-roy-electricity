@@ -22,7 +22,7 @@ export function PageHero({
 }: {
   kicker?: string;
   title: string;
-  text?: string;
+  text?: ReactNode;
   image?: { src: StaticImageData | string; alt: string; className?: string };
   children?: ReactNode;
 }) {

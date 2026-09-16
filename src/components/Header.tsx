@@ -20,6 +20,7 @@ export function Header() {
     setMenuPath(pathname);
     setOpen(false);
     setHidden(false);
+    lastY.current = 0;
   }
 
   useEffect(() => {
@@ -52,7 +53,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto grid h-14 max-w-[1600px] grid-cols-[1fr_auto] items-center px-4 lg:h-16 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
-        <Link href="/" className="relative z-10 block h-7 w-36 justify-self-start sm:h-8 sm:w-44" transitionTypes={["nav-back"]}>
+        <Link href="/" className="relative z-10 block h-7 w-36 justify-self-start sm:h-8 sm:w-44">
           <Image
             src="/images/logo-white.png"
             alt={site.name}
@@ -68,7 +69,6 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                transitionTypes={["nav-forward"]}
                 className={`rounded-full px-3 py-2 text-[14px] font-medium transition ${
                   active
                     ? "bg-surface text-foreground"
