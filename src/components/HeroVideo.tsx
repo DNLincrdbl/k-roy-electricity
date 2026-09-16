@@ -1,6 +1,9 @@
 "use client";
 
+import { preload } from "react-dom";
 import { useEffect, useState } from "react";
+
+preload("/k-roy_hero_video.mp4", { as: "video" });
 
 export function HeroVideo() {
   const [reduceMotion, setReduceMotion] = useState(false);

@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { MailForm } from "@/components/MailForm";
 import { Container, CtaPanel, HeroButton, PageHero } from "@/components/ui";
+import { heroImages } from "@/lib/heroes";
 
 export const metadata: Metadata = {
   title: "VBF / Assistance +",
@@ -29,7 +30,11 @@ export default function VbfPage() {
         kicker="Assistance +"
         title="Villamos biztonsági felülvizsgálat – nem csak papír, hanem valódi vizsgálat."
         text="Egy ingatlan villamos hálózata nem látványos – de minden nap használjuk. A kérdés csak az: biztonságos-e valóban?"
-        image={{ src: "/images/vbf-1.jpg", alt: "VBF felülvizsgálat" }}
+        image={{
+          src: heroImages.cabinet,
+          alt: "Elosztószekrény",
+          className: "object-center",
+        }}
       >
         <HeroButton href="#regisztracio">Regisztráció</HeroButton>
         <HeroButton href="/kapcsolat" variant="ghost">

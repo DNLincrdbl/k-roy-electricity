@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import type { StaticImageData } from "next/image";
 
 export function Container({
   children,
@@ -22,19 +23,22 @@ export function PageHero({
   kicker?: string;
   title: string;
   text?: string;
-  image?: { src: string; alt: string; className?: string };
+  image?: { src: StaticImageData | string; alt: string; className?: string };
   children?: ReactNode;
 }) {
   if (image) {
+    const blur = typeof image.src !== "string";
     return (
       <section className="px-3 pt-3 pb-2 md:px-5">
-        <div className="relative mx-auto min-h-[min(62svh,720px)] overflow-hidden rounded-[24px] md:rounded-[32px]">
+        <div className="relative mx-auto min-h-[min(62svh,720px)] overflow-hidden rounded-[24px] bg-[#0a0a0a] md:rounded-[32px]">
           <Image
             src={image.src}
             alt={image.alt}
             fill
-            priority
-            sizes="100vw"
+            preload
+            sizes="(max-width: 768px) 100vw, 1600px"
+            quality={75}
+            placeholder={blur ? "blur" : "empty"}
             className={`object-cover ${image.className ?? ""}`}
           />
           <div className="pointer-events-none absolute inset-0 bg-black/35" />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { MailForm } from "@/components/MailForm";
 import { Container, HeroButton, PageHero } from "@/components/ui";
+import { heroImages } from "@/lib/heroes";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export default function ContactPage() {
         kicker="Elérhetőség"
         title="Lépj velünk kapcsolatba"
         text={`${site.address} · ${site.phone}`}
-        image={{ src: "/images/gallery/g53.jpg", alt: "Helyszíni munkavégzés" }}
+        image={{ src: heroImages.siteWork, alt: "Helyszíni munkavégzés" }}
       >
         <HeroButton href={site.phoneHref}>Hívás</HeroButton>
         <HeroButton href="#uzenet" variant="ghost">

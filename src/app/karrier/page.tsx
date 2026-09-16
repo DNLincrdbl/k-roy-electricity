@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MailForm } from "@/components/MailForm";
 import { Container, HeroButton, PageHero } from "@/components/ui";
+import { heroImages } from "@/lib/heroes";
 
 export const metadata: Metadata = {
   title: "Karrier",
@@ -14,7 +15,7 @@ export default function CareerPage() {
         title="Jelentkezési űrlap"
         text="Kérjük, adja meg adatait, és a lehető leghamarabb felvesszük Önnel a kapcsolatot."
         image={{
-          src: "/images/portfolio-karbantartas.jpg",
+          src: heroImages.career,
           alt: "Ipari kivitelezés",
         }}
       >

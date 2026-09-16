@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { LightboxGallery } from "@/components/LightboxGallery";
 import { Container, CtaPanel, HeroButton, PageHero } from "@/components/ui";
 import { gallery } from "@/lib/gallery";
+import { heroImages } from "@/lib/heroes";
 import { clients } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function ReferencesPage() {
         kicker="Munkáink"
         title="Referenciák"
         text="Ipari, kereskedelmi és lakossági projektek – a papír mögött valós kivitelezés."
-        image={{ src: "/images/epulet-fo-eloszto.jpg", alt: "Épület fő elosztó" }}
+        image={{ src: heroImages.eloszto, alt: "Épület fő elosztó" }}
       >
         <HeroButton href="#galeria">Fotógaléria</HeroButton>
         <HeroButton href="/kapcsolat" variant="ghost">

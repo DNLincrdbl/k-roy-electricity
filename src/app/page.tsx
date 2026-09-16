@@ -5,6 +5,7 @@ import { clients, site, services } from "@/lib/site";
 import { gallery } from "@/lib/gallery";
 import { Container } from "@/components/ui";
 import { HeroVideo } from "@/components/HeroVideo";
+import { heroImages } from "@/lib/heroes";
 
 const showcase = [
   { src: "/images/portfolio-led.jpg", alt: "LED kivitelezés" },
@@ -105,10 +106,11 @@ export default function HomePage() {
       <section className="px-3 pb-4 md:px-5">
         <div className="relative mx-auto min-h-[420px] overflow-hidden rounded-[24px] md:min-h-[520px] md:rounded-[32px]">
           <Image
-            src="/images/elosztoszekreny.jpeg"
+            src={heroImages.cabinet}
             alt="Elosztószekrény"
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 1600px"
+            placeholder="blur"
             className="object-cover object-center"
           />
           <div className="pointer-events-none absolute inset-0 bg-black/55" />

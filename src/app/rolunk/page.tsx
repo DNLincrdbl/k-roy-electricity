@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { LightboxGallery } from "@/components/LightboxGallery";
 import { Container, CtaPanel, HeroButton, PageHero } from "@/components/ui";
+import { heroImages } from "@/lib/heroes";
 import {
   emergencyPackages,
   maintenanceNotes,
@@ -20,7 +21,7 @@ export default function AboutPage() {
       <PageHero
         kicker="A logó mögött"
         title="Tóth Károly vagyok, kecskeméti elektromos kivitelező vállalkozó."
-        image={{ src: "/images/hero-electrician.jpg", alt: "Villanyszerelés Kecskemét" }}
+        image={{ src: heroImages.electrician, alt: "Villanyszerelés Kecskemét" }}
       >
         <HeroButton href="/kapcsolat">Lépj velünk kapcsolatba</HeroButton>
         <HeroButton href="/referenciak" variant="ghost">
