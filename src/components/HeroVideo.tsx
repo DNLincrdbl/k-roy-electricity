@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export function HeroVideo() {
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -17,14 +18,17 @@ export function HeroVideo() {
 
   return (
     <video
-      className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center brightness-105 max-md:object-contain max-md:brightness-100"
+      className={`pointer-events-none absolute inset-0 h-full w-full object-cover object-center brightness-105 transition-opacity duration-700 max-md:object-contain max-md:brightness-100 ${
+        ready ? "opacity-100" : "opacity-0"
+      }`}
       autoPlay
       muted
       loop
       playsInline
       preload="auto"
-      poster="/images/hero-electrician.jpg"
       aria-hidden
+      onCanPlay={() => setReady(true)}
+      onPlaying={() => setReady(true)}
     >
       <source src="/k-roy_hero_video.mp4" type="video/mp4" />
     </video>

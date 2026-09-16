@@ -21,14 +21,6 @@ export default function HomePage() {
     <>
       <section className="px-3 pt-3 pb-2 md:px-5">
         <div className="relative mx-auto min-h-[min(70svh,920px)] overflow-hidden rounded-[24px] bg-[#0a0a0a] md:min-h-[min(88svh,920px)] md:rounded-[32px]">
-          <Image
-            src="/images/hero-electrician.jpg"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="hidden object-cover md:block"
-          />
           <HeroVideo />
           <div className="pointer-events-none absolute inset-0 bg-black/40 md:bg-black/25" />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/45" />
@@ -41,9 +33,6 @@ export default function HomePage() {
             <h1 className="font-display max-w-4xl text-[28px] leading-[1.15] font-medium text-balance drop-shadow-[0_2px_18px_rgba(0,0,0,0.85)] sm:text-[40px] md:text-[48px]">
               {site.tagline}
             </h1>
-            <p className="mt-28 max-w-2xl text-[15px] leading-relaxed text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.85)] sm:mt-36 md:mt-52 md:text-[18px] lg:mt-64">
-              {site.name} — {site.qualityQuote.toLowerCase()}.
-            </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:mt-10">
               <Link
                 href="/kapcsolat"
